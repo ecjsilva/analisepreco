@@ -129,13 +129,12 @@ a:visited:link:active {
 
 footer {
   display: flex;
-  align-items: flex-end;
   justify-content: center;
   background-color: #04204d;
   color: #fff;
   font-size: 12px;
   width: 100%;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
