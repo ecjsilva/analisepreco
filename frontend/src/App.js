@@ -17,25 +17,25 @@ function App() {
     e.preventDefault();
     setRemoveLoading(false);
     let pesq = e.target.elements.seach.value;
-    fetch(`http://localhost:3001/product/${pesq}`)
+    fetch(`http://192.168.1.212:3001/product/${pesq}`)
       .then((res) => res.json())
       .then((data) => {
         setTupanp(data);
         setRemoveLoading(true);
       });
-    fetch(`http://localhost:3001/productvz/${pesq}`)
+    fetch(`http://192.168.1.212:3001/productvz/${pesq}`)
       .then((res) => res.json())
       .then((data) => {
         setVenezap(data);
         setRemoveLoading(true);
       });
-    fetch(`http://localhost:3001/productac/${pesq}`)
+    fetch(`http://192.168.1.212:3001/productac/${pesq}`)
       .then((res) => res.json())
       .then((data) => {
         setArmazemcp(data);
         setRemoveLoading(true);
       });
-    fetch(`http://localhost:3001/productcz/${pesq}`)
+    fetch(`http://192.168.1.212:3001/productcz/${pesq}`)
       .then((res) => res.json())
       .then((data) => {
         setCazanovap(data);
@@ -150,6 +150,7 @@ function App() {
           {!removeLoading && <Loading />}
         </div>
       </div>
+      <footer>Copyright © 2023 Emerson Correia. All rights reserved.</footer>
     </>
   );
 }
