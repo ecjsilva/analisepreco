@@ -110,7 +110,7 @@ img {
   border-radius: 20px;
 }
 
-.imgproduct{
+.imgproduct {
   height: 100%;
   width: 50%;
   margin: 5px;
@@ -132,4 +132,17 @@ a {
 
 a:visited:link:active {
   color: black;
+}
+
+footer {
+  border-top: 1px solid #333;
+  background-color: #04204d;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
 }
