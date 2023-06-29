@@ -69,6 +69,13 @@ function App() {
                 <a href={tupanp.href} target="_blank" rel="noreferrer">
                   <div className="price-card">
                     <div className="price-card2">
+                      <div>
+                        <img
+                          src={tupanp.img}
+                          alt="img-product"
+                          className="imgproduct"
+                        />
+                      </div>
                       <div className="description" key={tupanp.descripition}>
                         {tupanp.descripition.toUpperCase()}
                       </div>
@@ -90,6 +97,13 @@ function App() {
                 <a href={venezap.href} target="_blank" rel="noreferrer">
                   <div className="price-card">
                     <div className="price-card2">
+                      <div>
+                        <img
+                          src={venezap.img}
+                          alt="img-product"
+                          className="imgproduct"
+                        />
+                      </div>
                       <div className="description" key={venezap.descripition}>
                         {venezap.descripition.toUpperCase()}
                       </div>
@@ -113,6 +127,13 @@ function App() {
                 <a href={armazemcp.href} target="_blank" rel="noreferrer">
                   <div className="price-card">
                     <div className="price-card2">
+                      <div>
+                        <img
+                          src={armazemcp.img}
+                          alt="img-product"
+                          className="imgproduct"
+                        />
+                      </div>
                       <div className="description" key={armazemcp.descripition}>
                         {armazemcp.descripition.toUpperCase()}
                       </div>
@@ -136,6 +157,13 @@ function App() {
                 <a href={cazanovap.href} target="_blank" rel="noreferrer">
                   <div className="price-card">
                     <div className="price-card2">
+                      <div>
+                        <img
+                          src={cazanovap.img}
+                          alt="img-product"
+                          className="imgproduct"
+                        />
+                      </div>
                       <div className="description" key={cazanovap.descripition}>
                         {cazanovap.descripition.toUpperCase()}
                       </div>

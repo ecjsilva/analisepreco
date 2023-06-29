@@ -17,8 +17,9 @@ module.exports = {
     $(".products-list__item").each((i, e) => {
       const price = $(e).find(".product-card__new-price").text();
       const descripition = $(e).find(".product-card__name > a").text();
-      const href = $(e).find(".product-card__name > a").attr("href")
-      const dados = { descripition, price, href };
+      const href = $(e).find(".product-card__name > a").attr("href");
+      const img = $(e).find(".product-card__image > a > img").attr("src");
+      const dados = { descripition, price, href, img };
       product.push(dados);
     });
     return res.send(product);
