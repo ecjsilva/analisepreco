@@ -19,10 +19,10 @@ module.exports = {
       const specialprice = $(e)
         .find(".special-price > .price")
         .prop("innerText");
-      const descripition = $(e).find(".product-name > a").text();
+      const description = $(e).find(".product-name > a").text();
       const href = $(e).find(".product-item-top > a ").attr("href");
       const img = $(e).find(".main-img").attr("src");
-      const dados = { descripition, price, specialprice, href, img };
+      const dados = { description, price, specialprice, href, img };
       product.push(dados);
     });
     return res.send(product);

@@ -146,3 +146,7 @@ footer {
   position: fixed;
   width: 100%;
 }
+
+.description {
+  text-transform: uppercase;
+}

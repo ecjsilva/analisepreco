@@ -16,11 +16,28 @@ module.exports = {
     let product = [];
     $(".product").each((i, e) => {
       const href = $(e).find(".area-image > a").attr("href");
+      const pricem = parseFloat($(e).find(".caracteristica-metro").val());
+      const pricep = parseFloat($(e).find(".valor-caixa").val());
+      const price = $(e).find(".after-featured").text();
+      const pricepiso = pricep / pricem;
 
-      const pricet = $(e).find(".after-featured").text();
+      const priceValue =
+        pricepiso == pricepiso
+          ? pricepiso.toLocaleString("pt-br", {
+              style: "currency",
+              currency: "BRL",
+            })
+          : price;
+
       const descripition = $(e).find(".name").text();
       const img = $(e).find(".product .image img").attr("data-src");
-      const dados = { descripition, pricet, href, img };
+      const dados = {
+        descripition,
+        href,
+        img,
+        price,
+        priceValue,
+      };
       product.push(dados);
     });
     return res.send(product);

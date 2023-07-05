@@ -12,30 +12,32 @@ function App() {
   const [venezap, setVenezap] = useState([]);
   const [armazemcp, setArmazemcp] = useState([]);
   const [cazanovap, setCazanovap] = useState([]);
+
   const [removeLoading, setRemoveLoading] = useState(true);
+
   const handleChange = (e) => {
     e.preventDefault();
     setRemoveLoading(false);
     let pesq = e.target.elements.seach.value;
-    fetch(`http://192.168.1.212:3001/product/${pesq}`)
+    fetch(`http://192.168.1.212:3002/product/${pesq}`)
       .then((res) => res.json())
       .then((data) => {
         setTupanp(data);
         setRemoveLoading(true);
       });
-    fetch(`http://192.168.1.212:3001/productvz/${pesq}`)
+    fetch(`http://192.168.1.212:3002/productvz/${pesq}`)
       .then((res) => res.json())
       .then((data) => {
         setVenezap(data);
         setRemoveLoading(true);
       });
-    fetch(`http://192.168.1.212:3001/productac/${pesq}`)
+    fetch(`http://192.168.1.212:3002/productac/${pesq}`)
       .then((res) => res.json())
       .then((data) => {
         setArmazemcp(data);
         setRemoveLoading(true);
       });
-    fetch(`http://192.168.1.212:3001/productcz/${pesq}`)
+    fetch(`http://192.168.1.212:3002/productcz/${pesq}`)
       .then((res) => res.json())
       .then((data) => {
         setCazanovap(data);
@@ -77,10 +79,10 @@ function App() {
                         />
                       </div>
                       <div className="description" key={tupanp.descripition}>
-                        {tupanp.descripition.toUpperCase()}
+                        {tupanp.descripition}
                       </div>
 
-                      <div className="price">{tupanp.price.toUpperCase()}</div>
+                      <div className="price">{tupanp.price}</div>
                     </div>
                   </div>
                 </a>
@@ -104,8 +106,8 @@ function App() {
                           className="imgproduct"
                         />
                       </div>
-                      <div className="description" key={venezap.descripition}>
-                        {venezap.descripition.toUpperCase()}
+                      <div className="description" key={venezap.description}>
+                        {venezap.description}
                       </div>
                       <div className="price">
                         {venezap.price.slice(0, 7)}
@@ -135,12 +137,10 @@ function App() {
                         />
                       </div>
                       <div className="description" key={armazemcp.descripition}>
-                        {armazemcp.descripition.toUpperCase()}
+                        {armazemcp.descripition}
                       </div>
 
-                      <div className="price">
-                        {armazemcp.price.toUpperCase()}
-                      </div>
+                      <div className="price">{armazemcp.price}</div>
                     </div>
                   </div>
                 </a>
@@ -165,10 +165,9 @@ function App() {
                         />
                       </div>
                       <div className="description" key={cazanovap.descripition}>
-                        {cazanovap.descripition.toUpperCase()}
+                        {cazanovap.descripition}
                       </div>
-
-                      <div className="price">{cazanovap.pricet}</div>
+                      <div className="price">{cazanovap.priceValue}</div>
                     </div>
                   </div>
                 </a>
