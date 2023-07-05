@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const routes = require("./routes");
 const bodyParser = require("body-parser");
-const port = 3003;
+const port = 3002;
 const cors = require("cors");
 const corsOptions = {
   origin: "*",
