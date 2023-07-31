@@ -19,25 +19,25 @@ function App() {
     e.preventDefault();
     setRemoveLoading(false);
     let pesq = e.target.elements.seach.value;
-    fetch(`http://192.168.1.212:3002/product/${pesq}`)
+    fetch(`http://192.168.1.20:3002/product/${pesq}`)
       .then((res) => res.json())
       .then((data) => {
         setTupanp(data);
         setRemoveLoading(true);
       });
-    fetch(`http://192.168.1.212:3002/productvz/${pesq}`)
+    fetch(`http://192.168.1.20:3002/productvz/${pesq}`)
       .then((res) => res.json())
       .then((data) => {
         setVenezap(data);
         setRemoveLoading(true);
       });
-    fetch(`http://192.168.1.212:3002/productac/${pesq}`)
+    fetch(`http://192.168.1.20:3002/productac/${pesq}`)
       .then((res) => res.json())
       .then((data) => {
         setArmazemcp(data);
         setRemoveLoading(true);
       });
-    fetch(`http://192.168.1.212:3002/productcz/${pesq}`)
+    fetch(`http://192.168.1.20:3002/productcz/${pesq}`)
       .then((res) => res.json())
       .then((data) => {
         setCazanovap(data);
